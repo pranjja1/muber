@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(2, 25, 36);
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: rgb(2, 25, 36);
+      overflow: hidden;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-weight: bolder;
+      font-size: x-large;
+    }
+
+    li a:hover {
+      background-color:grey;
+    }
+
+
+
+.slider-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+  left: 3px;
+ top: 29px;
+ 
+}
+
+.slider {
+
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+  width: 450px;
+  height: 450px;
+  right: 3px;
+ 
+}
+
+.controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+button {
+  padding: 10px;
+  right: 15%;
+  background-color: rgb(2, 25, 36);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(2, 25, 36);
+}
+
+.location{
+position: relative;
+top: 76px;
+left: 43px;
+}
+
+h1{
+  position: relative;
+  color: white;
+  text-align: center;
+  top: 78px;
+}
+
+
+
+.search{
+  background-color: rgb(28, 28, 76);
+  width: 370px;
+height: 186px;
+  position: absolute;
+  top: 585px;
+  display: block;
+ text-decoration: wavy;
+ font-family:Arial, Helvetica, sans-serif;
+  font-size: large;
+  text-align: center;
+  color: white;
+  
+  
+}
+
+label {
+ top: 60%;
+position: absolute;
+
+    margin-bottom: 5px;
+   
+  
+}
+
+input,
+select {
+    width: 20%;
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 4px;
+    
+}
+
+.focus{
+  position: relative;
+top: 370px;
+}
+
+
+</style>
+<body>
+    <nav>
+        <ul>
+          <li><a href="C:\Users\pranj\muber.html">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">CARS</a></li>
+          <li><a href="#">BIKES</a></li>
+          <li><a href="Untitled-1.html">LOGIN</a></li>
+          <li><a href="#">SIGN-IN</a></li>
+        
+        </ul>
+      </nav>
+      <div class="slider-container">
+        <div class="slider" id="slider">
+          <img src="C:\Users\pranj\OneDrive\Desktop\bike.png"width="80px"height="80px">
+          <img src="C:\Users\pranj\OneDrive\Desktop\lamb.png" width="80px"height="80px"alt="Image 2">
+          <img src="C:\Users\pranj\OneDrive\Desktop\blazer.png"width="80px"height="80px" alt="Image 3">
+          <img src="C:\Users\pranj\OneDrive\Desktop\bifta.png" width="80px"height="80px"alt="Image 3">
+          <img src="C:\Users\pranj\OneDrive\Desktop\brawler.png"width="80px"height="80px">
+          <img src="C:\Users\pranj\OneDrive\Desktop\dune.png" width="80px"height="80px">
+          
+          <!-- Add more images as needed -->
+        </div>
+        
+        <div class="controls">
+          <button onclick="prevSlide()">Previous</button>
+          <button onclick="nextSlide()">Next</button>
+        </div>
+      </div>
+<div class="search">
+      <form action="">
+      <p >PickUp Location<input type="search"locations="locations"></p>
+      <p >Destination<input type="search"locations="locations"></p>
+      <p style="text-wrap:left ;"><input type="radio"name="box">Bike<input type="radio"name="box">Car<input type="radio"name="box">Bus</p>
+      <button style="height: 34px; background-color: aquamarine; color: black;">VIEW COST</button>
+      </form>
+</div>
+<div class="select">
+  <p style="color: rgb(172, 218, 218); font-size: larger; width: 349px; position: absolute; right: 71px; top:540px"><br>250+ Cities covered Across India, Australia, New Zealand and the UK</br><br>55 Cr+ Yearly rides 
+    Booked by our customers every year</br><br>12 Cr+ Kilometers on S1 Distance covered on UBER S1 scooters 
+    within a year of launch</br><br></p>
+    <p style="color: rgb(172, 218, 218); font-size: large; width: 349px; position: absolute; right: 463px; top:540px"><br>For any budget From Bikes and Autos to Prime Sedans and Prime SUVs, you will find a ride in your budget at
+       your convenience any time.</br><br>For any distance Book rides within the city with Daily, 
+       or take a trip to your favourite destinations outside the city with Outstation.</br><br>For any 
+       duration Easily plan a day out without having to worry about conveyance with an hour-based 
+       package from Rental.</br></p>
+</div>
+
+
+      
+      <h1 style="position: absolute; top: 800px;">FOCUSED ON ENJOYMENT , WHEREVER YOU GO</h1>
+      <div class="focus">
+        <iframe width="400" height="315" src="https://www.youtube.com/embed/DYiiiGX_qvc?si=SyoQt
+        _Hl0xYMjhcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+        clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+        </iframe>
+        </div>
+      
+     
+      
+      <script>
+        let currentIndex = 0;
+const slider = document.getElementById('slider');
+const totalSlides = document.querySelectorAll('.slider img').length;
+
+function showSlide(index) {
+  const newPosition = -index * 100 + '%';
+  slider.style.transform = 'translateX(' + newPosition + ')';
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % totalSlides;
+  showSlide(currentIndex);
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+  showSlide(currentIndex);
+}
+
+      </script>
+      </body>
+      </html>
+      
+      
+</body>
+</html>
